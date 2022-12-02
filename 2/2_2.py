@@ -23,7 +23,7 @@ shapes = { #0 if you lost, 3 if the round was a draw, and 6 if you won
 with open('input.txt', 'r') as f:
     for x in f:
         pair = tuple(x.strip().split(' '))
-        points += extrapoints[ startpos[pair[0]] + shift[pair[1]] ] 
+        points += extrapoints[ startpos[pair[0]] + shift[pair[1]] ] #indexing the extrapoints array starting from 'startpos' and shifting by 'shift'
         points += shapes[pair[1]]
         
 print(points)
